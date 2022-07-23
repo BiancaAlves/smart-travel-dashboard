@@ -251,6 +251,10 @@ aside {
       justify-content: center;
       font-size: $font--regular;
 
+      &:last-child {
+        margin-right: 0;
+      }
+
       &--success {
         color: var(--color-success);
         background: var(--color-success-light);
@@ -497,8 +501,7 @@ aside {
 // Article
 
 article {
-  padding: 26px 60px;
-  height: 100vh;
+  padding: 26px 60px 14px;
   max-width: 1300px;
   box-sizing: border-box;
 }
