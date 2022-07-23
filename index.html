@@ -244,10 +244,18 @@
               </li>
             </ul>
           </nav>
-
-          <a href="#" class="header-note">
-            <i class="fa-regular fa-file-lines"></i>
-          </a>
+          <div class="header-options">
+            <div
+              class="header-options__dark"
+              onclick="toggleDarkMode(event.currentTarget)"
+            >
+              <i class="fa-solid fa-moon-stars"></i>
+              <i class="fa-solid fa-sun-bright"></i>
+            </div>
+            <a href="#" class="header-options__note">
+              <i class="fa-regular fa-file-lines"></i>
+            </a>
+          </div>
         </header>
 
         <div id="selected-border"></div>

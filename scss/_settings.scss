@@ -1,0 +1,73 @@
+// Colors
+
+/*$bg: #f5f9fc;
+$surface: #ffffff;
+
+$text: #0d161f;
+$text--light: rgba($text, 0.4);
+$light: rgba($text, 0.1);
+
+$primary: #0091ff;
+$secondary: #308fd6;
+$success: #5fc7ae;
+$accent: #ffb901;
+
+$primary--light: rgba($primary, 0.2);
+$success--light: rgba($success, 0.2);
+$accent--light: rgba($accent, 0.2); */
+
+// Themes
+
+:root {
+  --color-bg: #f5f9fc;
+  --color-surface: #ffffff;
+  --color-text: #0d161f;
+  --color-text-light: rgba(#0d161f, 0.4);
+  --color-light: rgba(#0d161f, 0.1);
+
+  --color-primary: #0091ff;
+  --color-success: #5fc7ae;
+  --color-accent: #ffb901;
+
+  --color-primary-light: rgba(#0091ff, 0.2);
+  --color-success-light: rgba(#5fc7ae, 0.2);
+  --color-accent-light: rgba(#ffb901, 0.2);
+}
+
+.dark {
+  --color-bg: #161b22;
+  --color-surface: #21262d;
+  --color-text: #ffffff;
+  --color-text-light: rgba(#ffffff, 0.4);
+  --color-light: rgba(#ffffff, 0.1);
+
+  --color-primary: #77bdfb;
+  --color-success: #7ce38b;
+  --color-accent: #faa356;
+
+  --color-primary-light: rgba(#77bdfb, 0.2);
+  --color-success-light: rgba(#7ce38b, 0.2);
+  --color-accent-light: rgba(#faa356, 0.2);
+}
+
+// Font
+
+$ff: "Red Hat Display", sans-serif;
+
+$font--small: 0.7rem;
+$font--regular: 0.8rem;
+$font--medium: 0.9rem;
+$font--large: 1.1rem;
+
+// Mixins
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin reset-figure {
+  margin: 0;
+  padding: 0;
+}

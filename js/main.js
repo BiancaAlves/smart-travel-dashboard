@@ -59,3 +59,17 @@ function menuToggle(element) {
     main.classList.add("toggle-active");
   }
 }
+
+// Dark mode toggle
+
+function toggleDarkMode(element) {
+  const body = document.getElementsByTagName("body")[0];
+
+  body.classList.contains("dark")
+    ? body.classList.remove("dark")
+    : body.classList.add("dark");
+
+  element.classList.contains("header-options__dark--active")
+    ? element.classList.remove("header-options__dark--active")
+    : element.classList.add("header-options__dark--active");
+}

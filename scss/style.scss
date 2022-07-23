@@ -1,56 +1,17 @@
-// Colors
-
-$bg: #f5f9fc;
-$surface: #ffffff;
-
-$text: #0d161f;
-$text--light: rgba($text, 0.4);
-$light: rgba($text, 0.1);
-
-$primary: #0091ff;
-$secondary: #308fd6;
-$success: #5fc7ae;
-$accent: #ffb901;
-
-$primary--light: rgba($primary, 0.2);
-$success--light: rgba($success, 0.2);
-$accent--light: rgba($accent, 0.2);
-
-// Font
-
-$ff: "Red Hat Display", sans-serif;
-
-$font--small: 0.7rem;
-$font--regular: 0.8rem;
-$font--medium: 0.9rem;
-$font--large: 1.1rem;
-
-// Mixins
-
-@mixin reset-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-@mixin reset-figure {
-  margin: 0;
-  padding: 0;
-}
-
-// Style
+@import "./settings";
 
 // General
 
 body {
-  color: $text;
+  color: var(--color-text);
   font-family: $ff;
-  background: $bg;
+  background: var(--color-bg);
   padding: 0;
   margin: 0;
 
   main {
-    display: flex;
+    display: grid;
+    grid-template-columns: 30% 70%;
   }
 
   button {
@@ -63,8 +24,8 @@ body {
     font-weight: 600;
 
     &[class$="button--primary"] {
-      background-color: $primary;
-      color: $surface;
+      background-color: var(--color-primary);
+      color: var(--color-surface);
     }
   }
 
@@ -78,10 +39,9 @@ body {
 aside {
   display: flex;
   align-items: stretch;
-  width: 30%;
   max-width: 600px;
   flex-shrink: 0;
-  background: $surface;
+  background: var(--color-surface);
 }
 
 // Main Menu
@@ -111,7 +71,7 @@ aside {
 
       li {
         a {
-          color: $text--light;
+          color: var(--color-text-light);
           transition: 0.2s;
         }
       }
@@ -139,10 +99,10 @@ aside {
       }
 
       &:hover {
-        color: $primary;
+        color: var(--color-primary);
 
         &::before {
-          background-color: $primary;
+          background-color: var(--color-primary);
         }
       }
     }
@@ -163,11 +123,11 @@ aside {
         display: flex;
         justify-content: center;
         align-items: center;
+        border-radius: 50%;
 
         &:hover {
-          background-color: $success--light;
-          color: $success;
-          border-radius: 50%;
+          background-color: var(--color-success-light);
+          color: var(--color-success);
         }
       }
     }
@@ -205,11 +165,11 @@ aside {
         position: absolute;
         top: 0;
         right: 0;
-        background: $accent;
+        background: var(--color-accent);
         border-radius: 50%;
         width: 6px;
         height: 6px;
-        border: 2px solid $surface;
+        border: 2px solid var(--color-surface);
       }
     }
   }
@@ -218,10 +178,10 @@ aside {
 // Sidebar
 
 .sidebar {
-  background: $surface;
+  background: var(--color-surface);
   padding: 22px 50px;
   width: 100%;
-  border-left: 1px solid $light;
+  border-left: 1px solid var(--color-light);
 
   .sidebar-top {
     display: flex;
@@ -236,14 +196,14 @@ aside {
       font-size: $font--small;
 
       &--signed {
-        background-color: $primary--light;
-        color: $secondary;
+        background-color: var(--color-primary-light);
+        color: var(--color-primary);
       }
     }
 
     &__folder,
     &__ellipsis {
-      color: $text--light;
+      color: var(--color-text-light);
       padding: 5px;
     }
   }
@@ -268,7 +228,7 @@ aside {
     }
 
     &__link {
-      color: $secondary;
+      color: var(--color-primary);
       font-weight: 700;
       font-size: $font--regular;
     }
@@ -292,18 +252,18 @@ aside {
       font-size: $font--regular;
 
       &--success {
-        color: $success;
-        background: $success--light;
+        color: var(--color-success);
+        background: var(--color-success-light);
       }
 
       &--accent {
-        color: $accent;
-        background: $accent--light;
+        color: var(--color-accent);
+        background: var(--color-accent-light);
       }
 
       &--primary {
-        color: $primary;
-        background: $primary--light;
+        color: var(--color-primary);
+        background: var(--color-primary-light);
       }
     }
   }
@@ -314,10 +274,10 @@ aside {
     &__label {
       font-size: $font--medium;
       font-weight: 700;
-      color: $text--light;
+      color: var(--color-text-light);
 
       strong {
-        color: $text;
+        color: var(--color-text);
         font-weight: 900;
         display: inline-block;
         margin-right: 6px;
@@ -328,7 +288,7 @@ aside {
       width: 100%;
       height: 6px;
       border-radius: 12px;
-      background-color: $light;
+      background-color: var(--color-light);
       position: relative;
 
       &::before {
@@ -338,7 +298,7 @@ aside {
         top: 0;
         bottom: 0;
         left: 0;
-        background: $primary;
+        background: var(--color-primary);
         border-radius: 12px;
       }
 
@@ -384,7 +344,7 @@ aside {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: 1px solid $light;
+    border-top: 1px solid var(--color-light);
     padding-top: 15px;
     margin-top: 15px;
 
@@ -395,8 +355,8 @@ aside {
     }
 
     &__arrow {
-      color: $primary;
-      background: $primary--light;
+      color: var(--color-primary);
+      background: var(--color-primary-light);
       padding: 12px;
       border-radius: 6px;
       display: flex;
@@ -410,20 +370,20 @@ aside {
       width: 100%;
 
       strong {
-        color: $text;
+        color: var(--color-text);
         display: block;
         font-size: $font--medium;
       }
 
       span {
-        color: $text--light;
+        color: var(--color-text-light);
         font-weight: 700;
         font-size: $font--small;
       }
     }
 
     &__right {
-      color: $text--light;
+      color: var(--color-text-light);
       padding-left: 6px;
     }
   }
@@ -437,7 +397,7 @@ aside {
       font-weight: 700;
       margin-bottom: 16px;
       padding-bottom: 10px;
-      border-bottom: 1px solid $light;
+      border-bottom: 1px solid var(--color-light);
 
       i {
         display: inline-block;
@@ -456,7 +416,7 @@ aside {
 
         a {
           font-weight: 700;
-          color: $secondary;
+          color: var(--color-primary);
         }
 
         strong {
@@ -486,11 +446,11 @@ aside {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: $primary--light;
+    background: var(--color-primary-light);
     border-radius: 10px;
     padding: 8px 12px;
     i {
-      color: $secondary;
+      color: var(--color-primary);
     }
 
     &__calendar {
@@ -501,7 +461,7 @@ aside {
       width: 100%;
 
       span {
-        color: $text--light;
+        color: var(--color-text-light);
         font-size: $font--small;
         font-weight: 700;
         display: block;
@@ -510,7 +470,7 @@ aside {
       strong {
         font-weight: 900;
         font-size: $font--medium;
-        color: $text;
+        color: var(--color-text);
       }
     }
   }
@@ -522,15 +482,15 @@ aside {
   border-bottom-right-radius: 12px;
   align-items: center;
   justify-content: center;
-  color: $text--light;
+  color: var(--color-text-light);
   cursor: pointer;
   height: 32px;
   width: 32px;
   position: absolute;
   right: -32px;
   top: 58px;
-  background: $surface;
-  border: 1px solid $light;
+  background: var(--color-surface);
+  border: 1px solid var(--color-light);
   border-left: 0;
 }
 
@@ -539,7 +499,6 @@ aside {
 article {
   padding: 26px 60px;
   height: 100vh;
-  width: 70%;
   max-width: 1300px;
   box-sizing: border-box;
 }
@@ -550,7 +509,7 @@ header {
   align-items: center;
   width: 100%;
   padding-bottom: 22px;
-  border-bottom: 1px solid $light;
+  border-bottom: 1px solid var(--color-light);
 }
 
 #menu-button {
@@ -571,7 +530,7 @@ header {
     margin-right: 32px;
 
     a {
-      color: $text--light;
+      color: var(--color-text-light);
       font-size: $font--medium;
       font-weight: 700;
       transition: 0.5s ease;
@@ -579,33 +538,64 @@ header {
 
     &--active {
       a {
-        color: $text;
+        color: var(--color-text);
         transition: 0.5s ease;
       }
     }
   }
 }
 
-.header-note {
-  background: $primary;
-  color: $surface;
-  border-radius: 50%;
-  width: 32px;
-  height: 32px;
+.header-options {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &__dark,
+  &__note {
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  &__dark {
+    background: var(--color-text);
+    color: var(--color-surface);
+    margin-right: 12px;
+
+    .fa-sun-bright {
+      display: none;
+    }
+
+    &--active {
+      .fa-moon-stars {
+        display: none;
+      }
+
+      .fa-sun-bright {
+        display: block;
+      }
+    }
+  }
+
+  &__note {
+    background: var(--color-primary);
+    color: var(--color-surface);
+  }
 }
 
 #selected-border {
-  background: $primary;
+  background: var(--color-primary);
   width: 66px;
   height: 1px;
   transition: 0.5s ease;
 }
 
 .booking-status {
-  background: $surface;
+  background: var(--color-surface);
   border-radius: 12px;
   padding: 28px 22px;
   margin: 32px 0 24px;
@@ -614,7 +604,7 @@ header {
   justify-content: center;
 
   &__icon {
-    color: $success;
+    color: var(--color-success);
     margin-right: 20px;
     font-size: 1.5rem;
   }
@@ -629,7 +619,7 @@ header {
     }
 
     p {
-      color: $text--light;
+      color: var(--color-text-light);
       margin: 0;
       font-size: $font--regular;
       font-weight: 700;
@@ -643,7 +633,7 @@ header {
   margin-bottom: 24px;
 
   .card {
-    background: $surface;
+    background: var(--color-surface);
     border-radius: 12px;
     padding: 28px 22px;
     width: calc(50% - 12px);
@@ -658,11 +648,11 @@ header {
       margin-top: 8px;
 
       &--available {
-        color: $primary;
+        color: var(--color-primary);
       }
 
       &--unavailable {
-        color: $accent;
+        color: var(--color-accent);
       }
     }
 
@@ -685,7 +675,7 @@ header {
       @include reset-list();
 
       li {
-        border-bottom: 1px solid $light;
+        border-bottom: 1px solid var(--color-light);
         padding-bottom: 12px;
         margin-bottom: 12px;
         font-size: $font--regular;
@@ -714,20 +704,20 @@ header {
       }
 
       &--signed {
-        color: $success;
+        color: var(--color-success);
       }
     }
 
     &__arrow {
       margin-top: 6px;
-      color: $text--light;
+      color: var(--color-text-light);
       cursor: pointer;
     }
   }
 }
 
 .agreements {
-  background: $surface;
+  background: var(--color-surface);
   border-radius: 12px;
   padding: 22px 54px;
 
@@ -741,13 +731,13 @@ header {
   &__counter {
     display: inline-block;
     padding-left: 6px;
-    color: $text--light;
+    color: var(--color-text-light);
   }
 
   &__see-all,
   &__id-link {
     font-weight: 700;
-    color: $primary;
+    color: var(--color-primary);
   }
 
   &__id-link {
@@ -763,9 +753,9 @@ header {
   }
 
   &__th {
-    color: $text--light;
+    color: var(--color-text-light);
     padding-bottom: 12px;
-    border-bottom: 1px solid $light;
+    border-bottom: 1px solid var(--color-light);
     text-align: left;
     font-size: $font--regular;
   }
@@ -775,7 +765,7 @@ header {
     font-size: $font--regular;
 
     span {
-      color: $text--light;
+      color: var(--color-text-light);
     }
   }
 
@@ -790,20 +780,20 @@ header {
     margin-right: 6px;
 
     &--signed {
-      background-color: $primary--light;
-      color: $primary;
+      background-color: var(--color-primary-light);
+      color: var(--color-primary);
     }
 
     &--canceled {
-      background: $light;
-      color: $text--light;
+      background: var(--color-light);
+      color: var(--color-text-light);
     }
   }
 
   &__status-date {
     font-size: $font--small;
     font-weight: 700;
-    color: $text--light;
+    color: var(--color-text-light);
   }
 
   &__profile-group {
@@ -825,12 +815,17 @@ header {
 
   &__ellipsis {
     text-align: right;
+
+    a {
+      color: var(--color-text-light);
+    }
   }
 }
 
 @media screen and (max-width: 1290px) {
-  main {
+  body main {
     position: relative;
+    grid-template-columns: 100%;
   }
 
   aside {
@@ -964,7 +959,7 @@ header {
   #menu-button {
     display: block;
     cursor: pointer;
-    color: $primary;
+    color: var(--color-primary);
     position: relative;
     z-index: 1;
 
@@ -986,7 +981,7 @@ header {
   }
 
   .header-menu {
-    background: $surface;
+    background: var(--color-surface);
     position: absolute;
     top: 0;
     left: 0;
