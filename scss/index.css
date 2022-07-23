@@ -27,6 +27,7 @@ aside {
   display: flex;
   align-items: stretch;
   width: 30%;
+  max-width: 600px;
   flex-shrink: 0; }
 
 .main-menu {
@@ -312,7 +313,8 @@ aside {
 
 article {
   padding: 26px 60px;
-  width: 70%; }
+  width: 70%;
+  max-width: 1300px; }
 
 .header-menu {
   display: flex;
@@ -320,7 +322,6 @@ article {
   align-items: center;
   width: 100%;
   padding-bottom: 22px;
-  margin-bottom: 32px;
   border-bottom: 1px solid rgba(13, 22, 31, 0.1); }
   .header-menu ul {
     margin: 0;
@@ -332,9 +333,11 @@ article {
     .header-menu__link a {
       color: rgba(13, 22, 31, 0.4);
       font-size: 0.9rem;
-      font-weight: 700; }
+      font-weight: 700;
+      transition: 0.5s ease; }
     .header-menu__link--active a {
-      color: #0d161f; }
+      color: #0d161f;
+      transition: 0.5s ease; }
   .header-menu__note {
     background: #0091ff;
     color: #ffffff;
@@ -345,11 +348,17 @@ article {
     align-items: center;
     justify-content: center; }
 
+#selected-border {
+  background: #0091ff;
+  width: 66px;
+  height: 1px;
+  transition: 0.5s ease; }
+
 .booking-status {
   background: #ffffff;
   border-radius: 12px;
   padding: 28px 22px;
-  margin-bottom: 24px;
+  margin: 32px 0 24px;
   display: flex;
   align-items: center;
   justify-content: center; }
