@@ -1,3 +1,5 @@
+// Tab toggle
+
 menuItemSelected(
   document.getElementsByClassName("header-menu__link--active")[0]
 );
@@ -25,4 +27,35 @@ function menuItemSelected(element) {
 
   borderBottom.style.width = `${element.offsetWidth}px`;
   borderBottom.style.transform = `translateX(${translateSize}px)`;
+}
+
+// Sidebar toggle
+
+function sidebarToggled() {
+  const main = document.getElementsByTagName("main")[0];
+
+  if (main.classList.contains("sidebar-active")) {
+    main.classList.remove("sidebar-active");
+    main.classList.remove("toggle-active");
+  } else {
+    main.classList.add("sidebar-active");
+    main.classList.add("toggle-active");
+  }
+}
+
+// Menu toggle
+
+function menuToggle(element) {
+  const main = document.getElementsByTagName("main")[0];
+  const menu = document.getElementsByClassName("header-menu")[0];
+
+  if (menu.classList.contains("header-menu--menu-active")) {
+    menu.classList.remove("header-menu--menu-active");
+    element.classList.remove("menu-active");
+    main.classList.remove("toggle-active");
+  } else {
+    menu.classList.add("header-menu--menu-active");
+    element.classList.add("menu-active");
+    main.classList.add("toggle-active");
+  }
 }

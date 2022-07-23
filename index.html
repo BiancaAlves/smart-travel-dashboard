@@ -203,10 +203,19 @@
             <i class="fa-regular fa-arrow-right-long"></i>
           </a>
         </div>
+        <div id="toggle-sidebar" onclick="sidebarToggled()">
+          <i class="fa-solid fa-chevron-right"></i>
+          <i class="fa-solid fa-chevron-left"></i>
+        </div>
       </aside>
 
       <article class="content">
         <header>
+          <div id="menu-button" onclick="menuToggle(event.currentTarget)">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+
           <nav class="header-menu">
             <ul>
               <li
@@ -234,10 +243,11 @@
                 <a href="#">Contractors</a>
               </li>
             </ul>
-            <a href="#" class="header-menu__note">
-              <i class="fa-regular fa-file-lines"></i>
-            </a>
           </nav>
+
+          <a href="#" class="header-note">
+            <i class="fa-regular fa-file-lines"></i>
+          </a>
         </header>
 
         <div id="selected-border"></div>
@@ -251,7 +261,11 @@
             <p>The Agreement is signed and this move is ready for booking</p>
           </div>
 
-          <button class="booking-status__button--primary">Book Move</button>
+          <button
+            class="booking-status__button booking-status__button--primary"
+          >
+            Book Move
+          </button>
         </section>
 
         <section class="cards">
@@ -307,9 +321,15 @@
             <thead>
               <tr>
                 <th class="agreements__th">ID</th>
-                <th class="agreements__th">Price</th>
-                <th class="agreements__th">Status</th>
-                <th class="agreements__th">Consignees</th>
+                <th class="agreements__th agreements__th--hide-mobile">
+                  Price
+                </th>
+                <th class="agreements__th agreements__th--hide-mobile">
+                  Status
+                </th>
+                <th class="agreements__th agreements__th--hide-mobile">
+                  Consignees
+                </th>
                 <th class="agreements__th"></th>
               </tr>
             </thead>
@@ -317,31 +337,33 @@
               <tr>
                 <td><a href="#" class="agreements__id-link">#28842</a></td>
 
-                <td class="agreements__price">$4.090 <span>(420 CF)</span></td>
+                <td class="agreements__price agreements__price--hide-mobile">
+                  $4.090 <span>(420 CF)</span>
+                </td>
 
-                <td>
+                <td class="agreements__td--hide-mobile">
                   <span class="agreements__status agreements__status--signed">
                     Signed
                   </span>
                   <span class="agreements__status-date">Today</span>
                 </td>
 
-                <td>
+                <td class="agreements__td--hide-mobile">
                   <div class="agreements__profile-group">
                     <div class="profile-photo">
                       <figure>
-                        <img src="./img/alex-just.png" alt="Alex Just" />
+                        <img src="./img/person-1.png" alt="Person 1" />
                       </figure>
                     </div>
                     <div class="profile-photo">
                       <figure>
-                        <img src="./img/alex-just.png" alt="Alex Just" />
+                        <img src="./img/person-2.png" alt="Person 2" />
                       </figure>
                     </div>
                   </div>
                 </td>
 
-                <td>
+                <td class="agreements__ellipsis">
                   <a href="#" class="sidebar-top__ellipsis">
                     <i class="fa-regular fa-ellipsis"></i>
                   </a>
@@ -351,31 +373,33 @@
               <tr>
                 <td><a href="#" class="agreements__id-link">#28788</a></td>
 
-                <td class="agreements__price">$3.200 <span>(390 CF)</span></td>
+                <td class="agreements__price agreements__price--hide-mobile">
+                  $3.200 <span>(390 CF)</span>
+                </td>
 
-                <td>
+                <td class="agreements__td--hide-mobile">
                   <span class="agreements__status agreements__status--canceled">
                     Canceled
                   </span>
                   <span class="agreements__status-date">Jan 12</span>
                 </td>
 
-                <td>
+                <td class="agreements__td--hide-mobile">
                   <div class="agreements__profile-group">
                     <div class="profile-photo">
                       <figure>
-                        <img src="./img/alex-just.png" alt="Alex Just" />
+                        <img src="./img/person-2.png" alt="Person 2" />
                       </figure>
                     </div>
                     <div class="profile-photo">
                       <figure>
-                        <img src="./img/alex-just.png" alt="Alex Just" />
+                        <img src="./img/person-1.png" alt="Alex Just" />
                       </figure>
                     </div>
                   </div>
                 </td>
 
-                <td>
+                <td class="agreements__ellipsis">
                   <a href="#" class="sidebar-top__ellipsis">
                     <i class="fa-regular fa-ellipsis"></i>
                   </a>
@@ -385,26 +409,28 @@
               <tr>
                 <td><a href="#" class="agreements__id-link">#28788</a></td>
 
-                <td class="agreements__price">$3.200 <span>(390 CF)</span></td>
+                <td class="agreements__price agreements__price--hide-mobile">
+                  $3.200 <span>(390 CF)</span>
+                </td>
 
-                <td>
+                <td class="agreements__td--hide-mobile">
                   <span class="agreements__status agreements__status--canceled">
                     Canceled
                   </span>
                   <span class="agreements__status-date">Jan 12</span>
                 </td>
 
-                <td>
+                <td class="agreements__td--hide-mobile">
                   <div class="agreements__profile-group">
                     <div class="profile-photo">
                       <figure>
-                        <img src="./img/alex-just.png" alt="Alex Just" />
+                        <img src="./img/person-1.png" alt="Alex Just" />
                       </figure>
                     </div>
                   </div>
                 </td>
 
-                <td>
+                <td class="agreements__ellipsis">
                   <a href="#" class="sidebar-top__ellipsis">
                     <i class="fa-regular fa-ellipsis"></i>
                   </a>

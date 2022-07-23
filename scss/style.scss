@@ -46,12 +46,10 @@ body {
   color: $text;
   font-family: $ff;
   background: $bg;
-  height: 100vh;
   padding: 0;
   margin: 0;
 
   main {
-    height: 100%;
     display: flex;
   }
 
@@ -78,26 +76,23 @@ body {
 // Aside
 
 aside {
-  height: 100%;
   display: flex;
   align-items: stretch;
   width: 30%;
   max-width: 600px;
   flex-shrink: 0;
+  background: $surface;
 }
 
 // Main Menu
 
 .main-menu {
-  background: $surface;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  height: 100%;
   box-sizing: border-box;
   position: relative;
   padding: 16px 0;
-  border-right: 2px solid $light;
   width: 60px;
   flex-shrink: 0;
 
@@ -226,6 +221,7 @@ aside {
   background: $surface;
   padding: 22px 50px;
   width: 100%;
+  border-left: 1px solid $light;
 
   .sidebar-top {
     display: flex;
@@ -428,6 +424,7 @@ aside {
 
     &__right {
       color: $text--light;
+      padding-left: 6px;
     }
   }
 
@@ -519,21 +516,51 @@ aside {
   }
 }
 
+#toggle-sidebar {
+  display: none;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  align-items: center;
+  justify-content: center;
+  color: $text--light;
+  cursor: pointer;
+  height: 32px;
+  width: 32px;
+  position: absolute;
+  right: -32px;
+  top: 58px;
+  background: $surface;
+  border: 1px solid $light;
+  border-left: 0;
+}
+
 // Article
 
 article {
   padding: 26px 60px;
+  height: 100vh;
   width: 70%;
   max-width: 1300px;
+  box-sizing: border-box;
 }
 
-.header-menu {
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   padding-bottom: 22px;
   border-bottom: 1px solid $light;
+}
+
+#menu-button {
+  display: none;
+}
+
+.header-menu {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 
   ul {
     @include reset-list;
@@ -557,17 +584,17 @@ article {
       }
     }
   }
+}
 
-  &__note {
-    background: $primary;
-    color: $surface;
-    border-radius: 50%;
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+.header-note {
+  background: $primary;
+  color: $surface;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #selected-border {
@@ -723,6 +750,10 @@ article {
     color: $primary;
   }
 
+  &__id-link {
+    font-size: $font--regular;
+  }
+
   &__table {
     width: 100%;
 
@@ -741,6 +772,7 @@ article {
 
   &__price {
     font-weight: 700;
+    font-size: $font--regular;
 
     span {
       color: $text--light;
@@ -789,5 +821,198 @@ article {
         height: 28px;
       }
     }
+  }
+
+  &__ellipsis {
+    text-align: right;
+  }
+}
+
+@media screen and (max-width: 1290px) {
+  main {
+    position: relative;
+  }
+
+  aside {
+    transform: translateX(-98%);
+    transition: 0.6s ease;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 500px;
+  }
+
+  article {
+    width: 98%;
+    max-width: none;
+  }
+
+  #toggle-sidebar {
+    display: flex;
+
+    .fa-chevron-left {
+      display: none;
+    }
+  }
+
+  article {
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transition: 0.2s ease;
+      z-index: -1;
+    }
+  }
+
+  main.sidebar-active {
+    aside {
+      transform: translateX(0);
+      transition: 0.6s ease;
+    }
+
+    #toggle-sidebar {
+      .fa-chevron-left {
+        display: block;
+      }
+
+      .fa-chevron-right {
+        display: none;
+      }
+    }
+  }
+
+  main.toggle-active {
+    article {
+      &::before {
+        background: rgba(#000, 0.4);
+        z-index: 1;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .booking-status {
+    flex-flow: row wrap;
+
+    &__icon {
+      width: 10%;
+      margin: 0;
+    }
+
+    &__content {
+      width: 90%;
+      padding-left: 20px;
+      box-sizing: border-box;
+    }
+
+    &__button {
+      margin-top: 22px;
+    }
+  }
+
+  .cards {
+    flex-flow: column nowrap;
+
+    .card {
+      width: 100%;
+      margin-bottom: 22px;
+
+      &__amount {
+        font-size: 1.6rem;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  th[class$="hide-mobile"],
+  td[class$="hide-mobile"] {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 590px) {
+  aside {
+    width: 290px;
+  }
+
+  .sidebar {
+    padding: 22px;
+
+    .sidebar-details {
+      ul li {
+        font-size: $font--small;
+      }
+    }
+  }
+
+  article {
+    padding: 22px;
+  }
+
+  #menu-button {
+    display: block;
+    cursor: pointer;
+    color: $primary;
+    position: relative;
+    z-index: 1;
+
+    .fa-xmark {
+      display: none;
+    }
+
+    &.menu-active {
+      z-index: 4;
+
+      .fa-xmark {
+        display: block;
+      }
+
+      .fa-bars {
+        display: none;
+      }
+    }
+  }
+
+  .header-menu {
+    background: $surface;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(-100%);
+    transition: 0.5s ease;
+    padding: 40px;
+    padding-top: 16px;
+    box-sizing: border-box;
+    z-index: 3;
+
+    ul {
+      display: block;
+
+      li {
+        padding: 10px 0;
+      }
+    }
+
+    &--menu-active {
+      transform: translateY(0);
+      transition: 0.5s ease;
+    }
+  }
+
+  #selected-border {
+    display: none;
   }
 }
