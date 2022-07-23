@@ -69,6 +69,10 @@ body {
       color: $surface;
     }
   }
+
+  a {
+    text-decoration: none;
+  }
 }
 
 // Aside
@@ -163,7 +167,6 @@ aside {
         display: flex;
         justify-content: center;
         align-items: center;
-        text-decoration: none;
 
         &:hover {
           background-color: $success--light;
@@ -245,7 +248,6 @@ aside {
     &__ellipsis {
       color: $text--light;
       padding: 5px;
-      text-decoration: none;
     }
   }
 
@@ -269,7 +271,6 @@ aside {
     }
 
     &__link {
-      text-decoration: none;
       color: $secondary;
       font-weight: 700;
       font-size: $font--regular;
@@ -291,7 +292,6 @@ aside {
       display: flex;
       align-items: center;
       justify-content: center;
-      text-decoration: none;
       font-size: $font--regular;
 
       &--success {
@@ -390,7 +390,6 @@ aside {
     border-top: 1px solid $light;
     padding-top: 15px;
     margin-top: 15px;
-    text-decoration: none;
 
     &:first-of-type {
       border-top: 0;
@@ -428,7 +427,6 @@ aside {
 
     &__right {
       color: $text--light;
-      text-decoration: none;
     }
   }
 
@@ -461,7 +459,6 @@ aside {
         a {
           font-weight: 700;
           color: $secondary;
-          text-decoration: none;
         }
 
         strong {
@@ -494,8 +491,6 @@ aside {
     background: $primary--light;
     border-radius: 10px;
     padding: 8px 12px;
-    text-decoration: none;
-
     i {
       color: $secondary;
     }
@@ -518,6 +513,270 @@ aside {
         font-weight: 900;
         font-size: $font--medium;
         color: $text;
+      }
+    }
+  }
+}
+
+// Article
+
+article {
+  padding: 26px 60px;
+  width: 70%;
+}
+
+.header-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 22px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid $light;
+
+  ul {
+    @include reset-list;
+    display: flex;
+  }
+
+  &__link {
+    margin-right: 32px;
+
+    a {
+      color: $text--light;
+      font-size: $font--medium;
+      font-weight: 700;
+    }
+
+    &--active {
+      a {
+        color: $text;
+      }
+    }
+  }
+
+  &__note {
+    background: $primary;
+    color: $surface;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.booking-status {
+  background: $surface;
+  border-radius: 12px;
+  padding: 28px 22px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__icon {
+    color: $success;
+    margin-right: 20px;
+    font-size: 1.5rem;
+  }
+
+  &__content {
+    width: 100%;
+
+    h2 {
+      font-size: $font--large;
+      margin: 0 0 4px 0;
+      font-weight: 900;
+    }
+
+    p {
+      color: $text--light;
+      margin: 0;
+      font-size: $font--regular;
+      font-weight: 700;
+    }
+  }
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+
+  .card {
+    background: $surface;
+    border-radius: 12px;
+    padding: 28px 22px;
+    width: calc(50% - 12px);
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    &__status-circle {
+      font-size: 0.65rem;
+      margin-right: 34px;
+      margin-top: 8px;
+
+      &--available {
+        color: $primary;
+      }
+
+      &--unavailable {
+        color: $accent;
+      }
+    }
+
+    &__content {
+      width: 100%;
+
+      h3 {
+        margin: 0;
+        font-weight: 900;
+      }
+    }
+
+    &__amount {
+      font-size: 2rem;
+      font-weight: 900;
+      margin: 20px 0;
+    }
+
+    &__list {
+      @include reset-list();
+
+      li {
+        border-bottom: 1px solid $light;
+        padding-bottom: 12px;
+        margin-bottom: 12px;
+        font-size: $font--regular;
+        font-weight: 700;
+        display: flex;
+        justify-content: space-between;
+
+        &:last-child {
+          border-bottom: 0;
+          padding-bottom: 0;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &__list-status {
+      font-weight: 900;
+      font-size: $font--small;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      i {
+        font-size: $font--large;
+        margin-right: 6px;
+      }
+
+      &--signed {
+        color: $success;
+      }
+    }
+
+    &__arrow {
+      margin-top: 6px;
+      color: $text--light;
+      cursor: pointer;
+    }
+  }
+}
+
+.agreements {
+  background: $surface;
+  border-radius: 12px;
+  padding: 22px 54px;
+
+  &__title {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__counter {
+    display: inline-block;
+    padding-left: 6px;
+    color: $text--light;
+  }
+
+  &__see-all,
+  &__id-link {
+    font-weight: 700;
+    color: $primary;
+  }
+
+  &__table {
+    width: 100%;
+
+    tbody tr td {
+      padding: 4px 0;
+    }
+  }
+
+  &__th {
+    color: $text--light;
+    padding-bottom: 12px;
+    border-bottom: 1px solid $light;
+    text-align: left;
+    font-size: $font--regular;
+  }
+
+  &__price {
+    font-weight: 700;
+
+    span {
+      color: $text--light;
+    }
+  }
+
+  &__status {
+    display: inline-block;
+    font-size: $font--small;
+    padding: 2px 8px;
+    width: 50px;
+    text-align: center;
+    border-radius: 4px;
+    font-weight: 700;
+    margin-right: 6px;
+
+    &--signed {
+      background-color: $primary--light;
+      color: $primary;
+    }
+
+    &--canceled {
+      background: $light;
+      color: $text--light;
+    }
+  }
+
+  &__status-date {
+    font-size: $font--small;
+    font-weight: 700;
+    color: $text--light;
+  }
+
+  &__profile-group {
+    display: flex;
+
+    .profile-photo {
+      margin-right: 6px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      figure {
+        width: 28px;
+        height: 28px;
       }
     }
   }

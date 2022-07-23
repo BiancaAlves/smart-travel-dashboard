@@ -204,6 +204,202 @@
           </a>
         </div>
       </aside>
+
+      <article class="content">
+        <header>
+          <nav class="header-menu">
+            <ul>
+              <li class="header-menu__link header-menu__link--active">
+                <a href="#">Overview</a>
+              </li>
+              <li class="header-menu__link">
+                <a href="#">Inventory</a>
+              </li>
+              <li class="header-menu__link">
+                <a href="#">Services</a>
+              </li>
+              <li class="header-menu__link">
+                <a href="#">Contractors</a>
+              </li>
+            </ul>
+            <a href="#" class="header-menu__note">
+              <i class="fa-regular fa-file-lines"></i>
+            </a>
+          </nav>
+        </header>
+
+        <section class="booking-status">
+          <div class="booking-status__icon">
+            <i class="fa-regular fa-circle-check"></i>
+          </div>
+          <div class="booking-status__content">
+            <h2>Ready for Booking</h2>
+            <p>The Agreement is signed and this move is ready for booking</p>
+          </div>
+
+          <button class="booking-status__button--primary">Book Move</button>
+        </section>
+
+        <section class="cards">
+          <div class="card">
+            <i
+              class="card__status-circle card__status-circle--available fa-solid fa-circle"
+            ></i>
+
+            <div class="card__content">
+              <h3 clas="card__title">Inventory</h3>
+              <p class="card__amount">$3,200</p>
+
+              <ul class="card__list">
+                <li>42 Items</li>
+                <li>420 Cubic Feet</li>
+              </ul>
+            </div>
+
+            <i class="card__arrow fa-regular fa-arrow-right"></i>
+          </div>
+
+          <div class="card">
+            <i
+              class="card__status-circle card__status-circle--unavailable fa-solid fa-circle"
+            ></i>
+
+            <div class="card__content">
+              <h3 clas="card__title">Services</h3>
+              <p class="card__amount">$890</p>
+
+              <ul class="card__list">
+                <li>4 Additional Services</li>
+                <li>
+                  Insurance
+                  <span class="card__list-status card__list-status--signed">
+                    <i class="fa-regular fa-circle-check"></i> Signed
+                  </span>
+                </li>
+              </ul>
+            </div>
+
+            <i class="card__arrow fa-regular fa-arrow-right"></i>
+          </div>
+        </section>
+
+        <section class="agreements">
+          <div class="agreements__title">
+            <h3>Agreements <span class="agreements__counter">03</span></h3>
+            <a href="#" class="agreements__see-all">See All</a>
+          </div>
+
+          <table class="agreements__table">
+            <thead>
+              <tr>
+                <th class="agreements__th">ID</th>
+                <th class="agreements__th">Price</th>
+                <th class="agreements__th">Status</th>
+                <th class="agreements__th">Consignees</th>
+                <th class="agreements__th"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="#" class="agreements__id-link">#28842</a></td>
+
+                <td class="agreements__price">$4.090 <span>(420 CF)</span></td>
+
+                <td>
+                  <span class="agreements__status agreements__status--signed">
+                    Signed
+                  </span>
+                  <span class="agreements__status-date">Today</span>
+                </td>
+
+                <td>
+                  <div class="agreements__profile-group">
+                    <div class="profile-photo">
+                      <figure>
+                        <img src="./img/alex-just.png" alt="Alex Just" />
+                      </figure>
+                    </div>
+                    <div class="profile-photo">
+                      <figure>
+                        <img src="./img/alex-just.png" alt="Alex Just" />
+                      </figure>
+                    </div>
+                  </div>
+                </td>
+
+                <td>
+                  <a href="#" class="sidebar-top__ellipsis">
+                    <i class="fa-regular fa-ellipsis"></i>
+                  </a>
+                </td>
+              </tr>
+
+              <tr>
+                <td><a href="#" class="agreements__id-link">#28788</a></td>
+
+                <td class="agreements__price">$3.200 <span>(390 CF)</span></td>
+
+                <td>
+                  <span class="agreements__status agreements__status--canceled">
+                    Canceled
+                  </span>
+                  <span class="agreements__status-date">Jan 12</span>
+                </td>
+
+                <td>
+                  <div class="agreements__profile-group">
+                    <div class="profile-photo">
+                      <figure>
+                        <img src="./img/alex-just.png" alt="Alex Just" />
+                      </figure>
+                    </div>
+                    <div class="profile-photo">
+                      <figure>
+                        <img src="./img/alex-just.png" alt="Alex Just" />
+                      </figure>
+                    </div>
+                  </div>
+                </td>
+
+                <td>
+                  <a href="#" class="sidebar-top__ellipsis">
+                    <i class="fa-regular fa-ellipsis"></i>
+                  </a>
+                </td>
+              </tr>
+
+              <tr>
+                <td><a href="#" class="agreements__id-link">#28788</a></td>
+
+                <td class="agreements__price">$3.200 <span>(390 CF)</span></td>
+
+                <td>
+                  <span class="agreements__status agreements__status--canceled">
+                    Canceled
+                  </span>
+                  <span class="agreements__status-date">Jan 12</span>
+                </td>
+
+                <td>
+                  <div class="agreements__profile-group">
+                    <div class="profile-photo">
+                      <figure>
+                        <img src="./img/alex-just.png" alt="Alex Just" />
+                      </figure>
+                    </div>
+                  </div>
+                </td>
+
+                <td>
+                  <a href="#" class="sidebar-top__ellipsis">
+                    <i class="fa-regular fa-ellipsis"></i>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </article>
     </main>
     <script src="https://kit.fontawesome.com/dfec5d1014.js"></script>
   </body>

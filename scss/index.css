@@ -19,6 +19,8 @@ body {
     body button[class$="button--primary"] {
       background-color: #0091ff;
       color: #ffffff; }
+  body a {
+    text-decoration: none; }
 
 aside {
   height: 100%;
@@ -85,8 +87,7 @@ aside {
         margin: 0 auto;
         display: flex;
         justify-content: center;
-        align-items: center;
-        text-decoration: none; }
+        align-items: center; }
         .main-menu__bottom-links ul li a:hover {
           background-color: rgba(95, 199, 174, 0.2);
           color: #5fc7ae;
@@ -138,8 +139,7 @@ aside {
         color: #308fd6; }
     .sidebar .sidebar-top__folder, .sidebar .sidebar-top__ellipsis {
       color: rgba(13, 22, 31, 0.4);
-      padding: 5px;
-      text-decoration: none; }
+      padding: 5px; }
   .sidebar .sidebar-main {
     padding: 20px 0 26px 0;
     text-align: center; }
@@ -153,7 +153,6 @@ aside {
       margin: 12px auto 0;
       font-size: 1.1rem; }
     .sidebar .sidebar-main__link {
-      text-decoration: none;
       color: #308fd6;
       font-weight: 700;
       font-size: 0.8rem; }
@@ -171,7 +170,6 @@ aside {
       display: flex;
       align-items: center;
       justify-content: center;
-      text-decoration: none;
       font-size: 0.8rem; }
       .sidebar .sidebar-main__icon--success {
         color: #5fc7ae;
@@ -226,8 +224,7 @@ aside {
     align-items: center;
     border-top: 1px solid rgba(13, 22, 31, 0.1);
     padding-top: 15px;
-    margin-top: 15px;
-    text-decoration: none; }
+    margin-top: 15px; }
     .sidebar .sidebar-option:first-of-type {
       border-top: 0;
       margin-top: 0;
@@ -253,8 +250,7 @@ aside {
         font-weight: 700;
         font-size: 0.7rem; }
     .sidebar .sidebar-option__right {
-      color: rgba(13, 22, 31, 0.4);
-      text-decoration: none; }
+      color: rgba(13, 22, 31, 0.4); }
   .sidebar .sidebar-details {
     font-size: 0.9rem;
     padding: 42px 0 22px; }
@@ -278,8 +274,7 @@ aside {
         margin-bottom: 12px; }
         .sidebar .sidebar-details ul li a {
           font-weight: 700;
-          color: #308fd6;
-          text-decoration: none; }
+          color: #308fd6; }
         .sidebar .sidebar-details ul li strong {
           font-weight: 600; }
         .sidebar .sidebar-details ul li .profile-photo {
@@ -298,8 +293,7 @@ aside {
     justify-content: space-between;
     background: rgba(0, 145, 255, 0.2);
     border-radius: 10px;
-    padding: 8px 12px;
-    text-decoration: none; }
+    padding: 8px 12px; }
     .sidebar .sidebar-appointment i {
       color: #308fd6; }
     .sidebar .sidebar-appointment__calendar {
@@ -338,8 +332,7 @@ article {
     .header-menu__link a {
       color: rgba(13, 22, 31, 0.4);
       font-size: 0.9rem;
-      font-weight: 700;
-      text-decoration: none; }
+      font-weight: 700; }
     .header-menu__link--active a {
       color: #0d161f; }
   .header-menu__note {
@@ -350,13 +343,12 @@ article {
     height: 32px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-decoration: none; }
+    justify-content: center; }
 
 .booking-status {
   background: #ffffff;
   border-radius: 12px;
-  padding: 40px 22px;
+  padding: 28px 22px;
   margin-bottom: 24px;
   display: flex;
   align-items: center;
@@ -379,11 +371,12 @@ article {
 
 .cards {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  margin-bottom: 24px; }
   .cards .card {
     background: #ffffff;
     border-radius: 12px;
-    padding: 40px 22px;
+    padding: 28px 22px;
     width: calc(50% - 12px);
     box-sizing: border-box;
     display: flex;
@@ -435,6 +428,66 @@ article {
         color: #5fc7ae; }
     .cards .card__arrow {
       margin-top: 6px;
+      color: rgba(13, 22, 31, 0.4);
+      cursor: pointer; }
+
+.agreements {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 22px 54px; }
+  .agreements__title {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .agreements__counter {
+    display: inline-block;
+    padding-left: 6px;
+    color: rgba(13, 22, 31, 0.4); }
+  .agreements__see-all, .agreements__id-link {
+    font-weight: 700;
+    color: #0091ff; }
+  .agreements__table {
+    width: 100%; }
+    .agreements__table tbody tr td {
+      padding: 4px 0; }
+  .agreements__th {
+    color: rgba(13, 22, 31, 0.4);
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(13, 22, 31, 0.1);
+    text-align: left;
+    font-size: 0.8rem; }
+  .agreements__price {
+    font-weight: 700; }
+    .agreements__price span {
       color: rgba(13, 22, 31, 0.4); }
+  .agreements__status {
+    display: inline-block;
+    font-size: 0.7rem;
+    padding: 2px 8px;
+    width: 50px;
+    text-align: center;
+    border-radius: 4px;
+    font-weight: 700;
+    margin-right: 6px; }
+    .agreements__status--signed {
+      background-color: rgba(0, 145, 255, 0.2);
+      color: #0091ff; }
+    .agreements__status--canceled {
+      background: rgba(13, 22, 31, 0.1);
+      color: rgba(13, 22, 31, 0.4); }
+  .agreements__status-date {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: rgba(13, 22, 31, 0.4); }
+  .agreements__profile-group {
+    display: flex; }
+    .agreements__profile-group .profile-photo {
+      margin-right: 6px; }
+      .agreements__profile-group .profile-photo:last-child {
+        margin-right: 0; }
+      .agreements__profile-group .profile-photo figure {
+        width: 28px;
+        height: 28px; }
 
 /*# sourceMappingURL=index.css.map */
