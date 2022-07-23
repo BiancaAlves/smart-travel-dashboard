@@ -6,7 +6,205 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Smart Travel Dashboard</title>
 
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/logo.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./scss/index.css" />
   </head>
-  <body></body>
+  <body>
+    <main>
+      <aside>
+        <div class="main-menu">
+          <figure class="main-menu__logo">
+            <img src="./img/logo.png" alt="Logo" />
+          </figure>
+
+          <nav class="main-menu__top-links">
+            <ul>
+              <li class="main-menu__top-link">
+                <a href="#">
+                  <i class="fa-regular fa-chart-pie-simple"></i>
+                </a>
+              </li>
+
+              <li class="main-menu__top-link">
+                <a href="#">
+                  <i class="fa-regular fa-bolt"></i>
+                </a>
+              </li>
+
+              <li class="main-menu__top-link">
+                <a href="#">
+                  <i class="fa-regular fa-circle-check"></i>
+                </a>
+              </li>
+
+              <li class="main-menu__top-link">
+                <a href="#">
+                  <i class="fa-regular fa-calendar"></i>
+                </a>
+              </li>
+
+              <li class="main-menu__top-link">
+                <a href="#">
+                  <i class="fa-regular fa-clipboard"></i>
+                </a>
+              </li>
+
+              <li class="main-menu__top-link">
+                <a href="#">
+                  <i class="fa-regular fa-user-group"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <nav class="main-menu__bottom-links">
+            <ul>
+              <li class="main-menu__bottom-link">
+                <a href="#">
+                  <i class="fa-regular fa-chart-line"></i>
+                </a>
+              </li>
+
+              <li class="main-menu__bottom-link">
+                <a href="#">
+                  <i class="fa-regular fa-headphones-simple"></i>
+                </a>
+              </li>
+
+              <li class="profile-photo profile-photo--away">
+                <a href="#">
+                  <figure>
+                    <img src="./img/alex-just.png" alt="Alex Just" />
+                  </figure>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="sidebar">
+          <div class="sidebar-top">
+            <p class="sidebar-top__status sidebar-top__status--signed">
+              Signed
+            </p>
+
+            <div class="sidebar-top__links">
+              <a href="#" class="sidebar-top__folder">
+                <i class="fa-regular fa-folder"></i>
+              </a>
+              <a href="#">
+                <i class="fa-regular fa-ellipsis sidebar-top__ellipsis"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="sidebar-main">
+            <div class="profile-photo profile-photo--away">
+              <a href="#">
+                <figure>
+                  <img src="./img/olivia-evans.png" alt="Olivia Evans" />
+                </figure>
+              </a>
+            </div>
+
+            <h1 class="sidebar-main__title">Olivia Evans</h1>
+            <a href="#" class="sidebar-main__link">#224</a>
+
+            <div class="sidebar-main__icons">
+              <a
+                href="#"
+                class="sidebar-main__icon sidebar-main__icon--success"
+              >
+                <i class="fa-regular fa-phone"></i>
+              </a>
+              <a href="#" class="sidebar-main__icon sidebar-main__icon--accent">
+                <i class="fa-regular fa-envelope"></i>
+              </a>
+              <a
+                href="#"
+                class="sidebar-main__icon sidebar-main__icon--primary"
+              >
+                <i class="fa-regular fa-message"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="sidebar-loading">
+            <p class="sidebar-loading__label">
+              <strong>2 / 5 </strong> Followups
+            </p>
+            <div class="sidebar-loading__bar sidebar-loading__bar--40"></div>
+          </div>
+
+          <a href="#" class="sidebar-option">
+            <div class="sidebar-option__arrow">
+              <i class="fa-regular fa-arrow-up"></i>
+            </div>
+            <p class="sidebar-option__info">
+              <strong>03/06/18</strong>
+              <span>123 Apt 2, New York, NY 10001</span>
+            </p>
+            <div class="sidebar-option__right">
+              <i class="fa-regular fa-angle-right"></i>
+            </div>
+          </a>
+
+          <a href="#" class="sidebar-option">
+            <div class="sidebar-option__arrow">
+              <i class="fa-regular fa-arrow-down"></i>
+            </div>
+            <p class="sidebar-option__info">
+              <strong>03/06/18</strong>
+              <span>Apt 123, Alamo, NV 89001</span>
+            </p>
+            <div class="sidebar-option__right">
+              <i class="fa-regular fa-angle-right"></i>
+            </div>
+          </a>
+
+          <div class="sidebar-details">
+            <p class="sidebar-details__title">
+              <i class="fa-regular fa-align-left"></i>
+              Details
+            </p>
+
+            <ul>
+              <li>
+                <strong>Company</strong>
+                <a href="#">East Cost Movers</a>
+              </li>
+              <li>
+                <strong>Assigne to</strong>
+                <div class="profile-photo">
+                  <figure>
+                    <img src="./img/alex-just.png" alt="Alex Just" />
+                  </figure>
+                  <figcaption>Alex Just</figcaption>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <a href="#" class="sidebar-appointment">
+            <i class="fa-regular fa-calendar sidebar-appointment__calendar"></i>
+
+            <div class="sidebar-appointment__info">
+              <span>Next Appointment</span>
+              <strong>Today 3pm</strong>
+            </div>
+
+            <i class="fa-regular fa-arrow-right-long"></i>
+          </a>
+        </div>
+      </aside>
+    </main>
+    <script src="https://kit.fontawesome.com/dfec5d1014.js"></script>
+  </body>
 </html>
